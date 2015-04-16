@@ -1,4 +1,11 @@
+var webpack = require('webpack');
 var path = require('path');
+
+var defineObj = {
+  ON_TEST: process.env.NODE_ENV === 'test',
+  ON_DEVELOPMENT: process.env.NODE_ENV === 'development',
+  ON_PRODUCTION: process.env.NODE_ENV === 'production'
+};
 
 var babelOptions = {
   optional: ['es7.decorators'],
@@ -17,10 +24,11 @@ var babelOptions = {
 };
 
 module.exports = {
-  entry: './src/app.es6',
+  context: __dirname + '/src',
+  entry: './app.ts',
   output: {
-    path: path.join(__dirname, 'public'),
-    filename: 'app.js'
+    path: path.join(__dirname, defineObj.ON_TEST ? '/test' : '/dist'),
+    filename: 'bundle.js'
   },
   resolve: {
     alias: {
@@ -32,10 +40,15 @@ module.exports = {
   },
   module: {
     loaders: [
-      {
-        test: /\.es6$/,
-        loader: 'babel?' + JSON.stringify(babelOptions)
-      }
+      {test: /\.(es6|ts)$/, loader: 'babel?' + JSON.stringify(babelOptions)},
+      {test: /\.css/, loader: defineObj.ON_PRODUCTION ? "style!css?minimize" : "style!css"},
+      {test: /\.html/, loader: "html"}
     ]
-  }
+  },
+  debug: !defineObj.ON_PRODUCTION,
+  devtool: '#source-map',
+  watchDelay: 200,
+  plugins: [
+    new webpack.DefinePlugin(defineObj)
+  ]
 };

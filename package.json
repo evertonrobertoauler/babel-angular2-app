@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "A skeleton Angular 2 app built with babel.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "gulp test",
+    "watch": "gulp watch",
+    "build": "gulp build"
   },
   "author": "Shuhei Kagawa <shuhei.kagawa@gmail.com>",
   "license": "ISC",
@@ -12,7 +14,23 @@
     "babel-loader": "^5.0.0",
     "babel-plugin-angular2-at-annotation": "^0.0.1",
     "babel-plugin-angular2-type-annotation": "^0.0.1",
-    "webpack": "^1.7.3"
+    "browser-sync": "^2.5.0",
+    "css-loader": "^0.9.1",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-sass": "https://github.com/dlmanning/gulp-sass/tarball/2.x",
+    "gulp-shell": "^0.4.0",
+    "gulp-uglify": "^1.1.0",
+    "html-loader": "^0.2.3",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-coverage": "^0.2.7",
+    "karma-jasmine": "^0.3.5",
+    "q": "^1.2.0",
+    "run-sequence": "^1.0.2",
+    "style-loader": "^0.9.0",
+    "webpack": "https://github.com/evertonrobertoauler/webpack/tarball/master"
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.19",
