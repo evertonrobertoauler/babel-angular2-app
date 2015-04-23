@@ -9,17 +9,10 @@ var defineObj = {
 
 var babelOptions = {
   optional: ['es7.decorators'],
-  // HACK: Disable strict mode to compile angular2.
-  // `angular2/es6/prod/src/change_detection/parser/ast.es6` has methods
-  // called eval. They are compiled into `eval: function eval() {}` by
-  // babel and webpack raises error for them in strict mode.
-  // http://babeljs.io/docs/usage/transformers/other/strict/
-  blacklist: ['strict'],
   plugins: [
     './transformers/disable-define',
-    'angular2-type-annotation',
-    './transformers/angular2-type-assertion',
-    'angular2-at-annotation'
+    'angular2-annotations',
+    './transformers/angular2-type-assertion'
   ]
 };
 

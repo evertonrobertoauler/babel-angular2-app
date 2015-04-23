@@ -12,8 +12,7 @@
   "devDependencies": {
     "babel-core": "^5.1.3",
     "babel-loader": "^5.0.0",
-    "babel-plugin-angular2-at-annotation": "^0.0.1",
-    "babel-plugin-angular2-type-annotation": "^0.0.1",
+    "babel-plugin-angular2-annotations": "^0.1.0",
     "browser-sync": "^2.5.0",
     "css-loader": "^0.9.1",
     "del": "^1.1.1",
@@ -33,7 +32,7 @@
     "webpack": "https://github.com/evertonrobertoauler/webpack/tarball/master"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.19",
-    "rtts_assert": "2.0.0-alpha.19"
+    "angular2": "2.0.0-alpha.20",
+    "rtts_assert": "2.0.0-alpha.20"
   }
 }
