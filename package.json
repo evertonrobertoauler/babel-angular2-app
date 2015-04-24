@@ -29,7 +29,7 @@
     "q": "^1.2.0",
     "run-sequence": "^1.0.2",
     "style-loader": "^0.9.0",
-    "webpack": "https://github.com/evertonrobertoauler/webpack/tarball/master"
+    "webpack": "^1.8.9"
   },
   "dependencies": {
     "angular2": "2.0.0-alpha.20",
