@@ -32,7 +32,7 @@
     "webpack": "^1.8.9"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.20",
-    "rtts_assert": "2.0.0-alpha.20"
+    "angular2": "2.0.0-alpha.21",
+    "rtts_assert": "2.0.0-alpha.21"
   }
 }
